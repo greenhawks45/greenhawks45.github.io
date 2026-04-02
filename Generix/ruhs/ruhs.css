@@ -1,0 +1,66 @@
+/* * * * * * * * * * * */
+/* Content Box Formats */
+/* * * * * * * * * * * */
+main {
+    row-gap: 1vw;
+}
+
+.information-form, .transportation-form, .sheet-music, .ruhs-calendar {
+    width: 80%;
+    padding-bottom: 16px;
+
+    border: 5px solid white;
+    border-radius: 12px;
+
+    margin-top: 6px;
+    background-color: black;
+}
+
+/* Info + Transportation block */
+.info-transportation-block {
+    display: flex;
+    gap: 1vw;
+    width: 80%;
+}
+
+.transportation-form, .information-form {
+    flex: 1;
+}
+
+@media screen and (max-width:800px) {
+    .info-transportation-block {
+        flex-wrap: wrap;
+    }
+
+    .transportation-form, .information-form {
+        flex-grow: 1;
+        flex-basis: 100%;
+    }
+}
+
+/* Transportation Forms */
+.transportation-form {
+    justify-items: center;
+}
+
+ol {
+    text-align: left;
+    line-height: 150%;
+}
+
+/* Sheet Music */
+.sheet-music {
+    display: grid;
+    place-items: center;
+}
+
+/* Calendar */
+
+.calendar-size-container {
+    width: 70vw;
+    height: 45vw;
+    box-sizing: border-box;
+
+    margin: 0 auto;
+    margin-bottom: 2.85vw;
+}

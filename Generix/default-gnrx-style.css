@@ -1,0 +1,177 @@
+/* Site Standard Formatting */
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* body / main / p */
+
+body {
+    cursor: default;
+
+    margin: 0;
+
+    color: #bababa;
+    font-size: clamp(1rem, 2vw + 0.25rem, 2rem);
+    font-family: Candara, Trebuchet MS;
+
+    background-image: url(branding/gnrx-background.jpg);
+}
+
+main {
+    display: grid;
+    grid-auto-rows: auto;
+    min-height: 100vh;
+
+    height: 100%;
+    padding: 0;
+
+    padding-bottom: 8px;
+    /* Centers both horizontally and vertically with one property */
+    place-items: center;
+    text-align: center;
+}
+
+p {
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+/* Footer */
+footer {
+    background-color: black;
+    padding-bottom: 10px;
+
+    font-size: clamp(0.6rem, 1vw + 0.25rem, 1.25rem);
+    text-align: center;
+}
+
+
+/* Header */
+header {
+    color: white;
+    width: 100%;
+    background-color: black;
+}
+
+.gnrx-header {
+    display: flex;
+    min-height: 50px;
+    font-size: clamp(1.5rem, 2.5vw + 1.25rem, 5rem);
+    font-weight: bold;
+
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: clamp(1.5rem, 2.5vw + 1.25rem, 5rem);
+}
+
+/* Socials */
+.socials {
+    display: flex;
+    width: clamp(4rem, 10vw + 1rem, 15vw);
+    height: 100%;
+    gap: 10%;
+
+    justify-content: right;
+    margin-left: auto;
+}
+
+.invert {
+    filter: invert(100%);
+}
+
+/* Nav */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    row-gap: 10px;
+
+    padding: 10px;
+    text-align: center;
+    font-size: clamp(1rem, 2vw + 0.25rem, 2rem);
+    width: 100%;
+}
+
+.link-style-nav {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 100%;
+
+    color: white;
+    width: fit-content;
+    padding: 10px;
+
+    border-radius: 12px;
+    border: 5px solid white;
+    background-color: black;
+}
+
+/* Titles */
+h1, h2, h3, h4, h5, h6 {
+    color: white;
+
+    margin: 12px;
+}
+
+h1 {
+    font-size: clamp(2rem, 5vw + 1rem, 7rem);
+}
+
+h2 {
+    font-size: clamp(1rem, 2.5vw + 1rem, 5.5rem);
+}
+
+h3 {
+    font-size: clamp(0.5rem, 1.25vw + 1rem, 2.5rem);
+}
+
+h4 {
+    font-size: clamp(0.25rem, 0.75vw + 1rem, 1rem);
+}
+
+hr {
+    margin: 0;
+    height: 4px;
+    background-color: white;
+}
+
+/* Links */
+a:link, a:visited {
+    color: white;
+}
+
+a:hover {
+    color: #bababa
+}
+
+.link-style-1  {
+    display: flex;
+    justify-self: center;
+
+    text-decoration: none;
+    font-weight: bold;
+    font-size: clamp(0.5rem, 1vw + 0.5rem, 2rem);
+
+
+    color: white;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+
+    border-radius: 12px;
+    border: 5px solid white;
+    background-color: black;
+}
+
+.no-underline {
+    text-decoration: none;
+}

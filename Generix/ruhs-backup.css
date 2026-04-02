@@ -1,0 +1,239 @@
+/* Site Standard Formatting */
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* body / main / p */
+
+body {
+    margin: 0;
+
+    color: #bababa;
+    font-size: 16px;
+    font-family: Candara, Trebuchet MS;
+    font-weight: bold;
+}
+
+main {
+    display: grid;
+    padding-bottom: 8px;
+    /* Centers both horizontally and vertically with one property */
+    place-items: center;
+    text-align: center;
+
+    background-color: grey;
+}
+
+p {
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+/* Footer */
+footer {
+    background-color: black;
+    padding-bottom: 10px;
+
+    font-size: 12pt;
+    text-align: center;
+}
+
+
+/* Header */
+header {
+    color: white;
+    width: 100%;
+    background-color: black;
+}
+
+.gnrx-header {
+    min-height: 50px;
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Socials */
+.desktop-socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    margin-top: 7px;
+    margin-left: auto;
+    margin-right: 5px;
+}
+
+.mobile-socials {
+    display: none;
+}
+
+@media screen and (max-width:600px) {
+    .mobile-socials {
+        display: flex;
+        gap: 6px;
+        margin-top: 5px;
+        margin-left: auto;
+    }
+
+    .desktop-socials {
+        display: none;
+    }
+}
+
+.invert {
+    filter: invert(100%);
+}
+
+/* Nav */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    row-gap: 10px;
+
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    width: 100%;
+}
+
+.link-style-nav  {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 100%;
+
+    color: white;
+    width: fit-content;
+    padding: 10px;
+
+    border-radius: 12px;
+    border: 2.5px solid white;
+    background-color: black;
+}
+
+/* Titles */
+h1, h2, h3, h4, h5, h6 {
+    color: white;
+
+    margin: 12px;
+}
+
+h1 {
+    font-size: 40pt;
+}
+
+h2 {
+    font-size: 30pt;
+}
+
+hr {
+    margin: 0;
+}
+
+
+/* Page Unique Style*/
+
+/* Links */
+a:link, a:visited {
+    color: white;
+}
+
+a:hover {
+    color: #bababa
+}
+.link-style-1  {
+    display: flex;
+    justify-self: center;
+
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+
+
+    color: white;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+
+    border-radius: 12px;
+    border: 2.5px solid white;
+    background-color: black;
+}
+
+.no-underline {
+    text-decoration: none;
+}
+
+/* * * * * * * * * * * */
+/* Content Box Formats */
+/* * * * * * * * * * * */
+.information-form, .transportation-form, .sheet-music, .ruhs-calendar {
+    width: 80%;
+    padding-bottom: 16px;
+
+    border: 2.5px solid white;
+    border-radius: 12px;
+
+    margin-top: 6px;
+    background-color: black;
+}
+
+/* Info + Transportation block */
+.info-transportation-block {
+    display: flex;
+    gap: 5px;
+    width: 80%;
+}
+
+.transportation-form, .information-form {
+    flex: 1;
+}
+
+@media screen and (max-width:800px) {
+    .info-transportation-block {
+        flex-wrap: wrap;
+    }
+
+    .transportation-form, .information-form {
+        flex-grow: 1;
+        flex-basis: 100%;
+    }
+}
+
+/* Transportation Forms */
+.transportation-form {
+    justify-items: center;
+}
+
+ol {
+    text-align: left;
+    line-height: 150%;
+}
+
+/* Sheet Music */
+.sheet-music {
+    display: grid;
+    place-items: center;
+    font-size: 16px;
+}
+
+/* Calendar */
+
+.calendar-size-container {
+    border: 2.5px solid white;
+
+    width: 70vw;
+    height: 70vh;
+    box-sizing: border-box;
+
+    margin: 0 auto;
+    margin-bottom: 2.85vw;
+}
