@@ -1,5 +1,18 @@
 /* Site Standard Formatting */
 
+:root {
+    color-scheme: only light;
+    --header: #ffffff;
+    --text: #bababa;
+
+    --background: #000000;
+    --border: #ffffff;
+
+    --link: #ffffff;
+    --hover: #bababa;
+
+}
+
 ::-webkit-scrollbar {
     display: none;
 }
@@ -11,7 +24,7 @@ body {
 
     margin: 0;
 
-    color: #bababa;
+    color: var(--text);
     font-size: clamp(1rem, 2vw + 0.25rem, 2rem);
     font-family: Candara, Trebuchet MS;
 
@@ -39,7 +52,7 @@ p {
 
 /* Footer */
 footer {
-    background-color: black;
+    background-color: var(--background);
     padding-bottom: 10px;
 
     font-size: clamp(0.6rem, 1vw + 0.25rem, 1.25rem);
@@ -49,9 +62,9 @@ footer {
 
 /* Header */
 header {
-    color: white;
+    color: var(--header);
     width: 100%;
-    background-color: black;
+    background-color: var(--background);
 }
 
 .gnrx-header {
@@ -88,9 +101,9 @@ nav {
     display: flex;
     flex-wrap: wrap;
     box-sizing: border-box;
-    row-gap: 10px;
+    row-gap: 8px;
 
-    padding: 10px;
+    padding: 16px;
     text-align: center;
     font-size: clamp(1rem, 2vw + 0.25rem, 2rem);
     width: 100%;
@@ -106,18 +119,18 @@ nav {
     font-weight: bold;
     font-size: 100%;
 
-    color: white;
+    color: var(--link);
     width: fit-content;
-    padding: 10px;
+    padding: 8px;
 
     border-radius: 12px;
-    border: 5px solid white;
-    background-color: black;
+    border: 5px solid var(--border);
+    background-color: var(--background);
 }
 
 /* Titles */
 h1, h2, h3, h4, h5, h6 {
-    color: white;
+    color: var(--header);
 
     margin: 12px;
 }
@@ -141,16 +154,16 @@ h4 {
 hr {
     margin: 0;
     height: 4px;
-    background-color: white;
+    background-color: var(--border);
 }
 
 /* Links */
 a:link, a:visited {
-    color: white;
+    color: var(--link);
 }
 
 a:hover {
-    color: #bababa
+    color: var(--hover)
 }
 
 .link-style-1  {
@@ -162,14 +175,14 @@ a:hover {
     font-size: clamp(0.5rem, 1vw + 0.5rem, 2rem);
 
 
-    color: white;
+    color: var(--link);
     width: fit-content;
     height: fit-content;
     padding: 10px;
 
     border-radius: 12px;
-    border: 5px solid white;
-    background-color: black;
+    border: 5px solid var(--border);
+    background-color: var(--background);
 }
 
 .no-underline {
