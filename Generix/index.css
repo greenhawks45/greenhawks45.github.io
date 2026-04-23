@@ -13,7 +13,7 @@ main {
     width: 100%;
     background-color: var(--background);
     border-radius: 12px;
-    border: 5px solid var(--border);
+    border: var(--border);
 }
 
 .slideshow-banner {
@@ -38,5 +38,5 @@ main {
     width: 100%;
     background-color: var(--background);
     border-radius: 12px;
-    border: 5px solid var(--border);
+    border: var(--border);
  }

@@ -1,0 +1,59 @@
+////////////////////////////////////////////////////////////
+Apr 23, 2026 - 1:50AM
+
+Contact Us:
+- added contact-us.html
+- added contact-us.css
+- corrected all page's links to contact-us.html
+- moved footer out of main for proper sizing
+- add content div
+- add email link button
+
+All:
+- moved all footers out of main to allow for proper sizing
+- added logo to about us and contact us
+- changed all icons on each page to be of type png
+- standardized nav spelling of marina hs vs marina high school across all pages
+
+RUHS Info Form:
+- created info form html
+- created container for form
+- added text and fields for form
+- formatted form to look nicer
+- all required fields are actually required
+- changed submit button style
+- style input fields and text
+- added hr to divide it visually
+
+Apr 23, 2026 - 5:38AM
+////////////////////////////////////////////////////////////
+Apr 8, 2026 - 8:50PM
+
+About Us:
+- Change staff photos from classes to ids
+- added all 3 values to --border in :root
+- added --border-radius to :root
+- added a clamp for better scaling to --border's value
+
+Shows:
+- Made video container background white and rounded corners of video element to match the site look.
+
+All:
+- Added var() to all relevant border elements
+
+Apr 9, 2026 - 3:14AM
+////////////////////////////////////////////////////////////
+Apr 7, 2026 - 11:53PM
+
+About Us:
+    - Make staff photos a div class backgrounds instead of img to allow for easier size properties.
+    - Adjust image div to scale on rem
+    - Adjust h2 and h3 placements
+    - Adjust h2 and h3 sizing to rem sizes
+    - Changed all staff palceholders to same format
+    - Added placeholder images to all staff bios
+Changelog:
+    - Added a changelog for my own record keeping.
+
+Apr 8, 2026 - 3:59AM
+////////////////////////////////////////////////////////////

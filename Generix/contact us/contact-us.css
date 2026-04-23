@@ -1,0 +1,12 @@
+.content {
+    margin-top: 3vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    width: 80vw;
+    padding: 2rem;
+    border: var(--border);
+    border-radius: var(--border-radius);
+    background-color: var(--background);
+}

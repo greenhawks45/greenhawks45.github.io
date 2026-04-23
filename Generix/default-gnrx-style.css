@@ -1,16 +1,18 @@
 /* Site Standard Formatting */
 
 :root {
+
     color-scheme: only light;
-    --header: #ffffff;
+    font-size: 16px;
+
+    --header: white;
     --text: #bababa;
-
     --background: #000000;
-    --border: #ffffff;
+    --border: clamp(0.265rem, 0.125vw + 0.2rem, 0.4rem) solid white;
+    --border-radius: 1rem;
 
-    --link: #ffffff;
+    --link: white;
     --hover: #bababa;
-
 }
 
 ::-webkit-scrollbar {
@@ -23,6 +25,9 @@ body {
     cursor: default;
 
     margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 
     color: var(--text);
     font-size: clamp(1rem, 2vw + 0.25rem, 2rem);
@@ -32,16 +37,18 @@ body {
 }
 
 main {
+    flex: 1;
     display: grid;
     grid-auto-rows: auto;
-    min-height: 100vh;
-
-    height: 100%;
+    min-height: 0;
     padding: 0;
 
     padding-bottom: 8px;
     /* Centers both horizontally and vertically with one property */
-    place-items: center;
+    place-items: start center;
+    align-content: start;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
 }
 
@@ -123,8 +130,8 @@ nav {
     width: fit-content;
     padding: 8px;
 
-    border-radius: 12px;
-    border: 5px solid var(--border);
+    border-radius: var(--border-radius);
+    border: var(--border);
     background-color: var(--background);
 }
 
@@ -154,7 +161,7 @@ h4 {
 hr {
     margin: 0;
     height: 4px;
-    background-color: var(--border);
+    background-color: white;
 }
 
 /* Links */
@@ -163,7 +170,7 @@ a:link, a:visited {
 }
 
 a:hover {
-    color: var(--hover)
+    color: var(--hover);
 }
 
 .link-style-1  {
@@ -180,8 +187,8 @@ a:hover {
     height: fit-content;
     padding: 10px;
 
-    border-radius: 12px;
-    border: 5px solid var(--border);
+    border-radius: var(--border-radius);
+    border: var(--border);
     background-color: var(--background);
 }
 

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>GNRX | Redondo Union HS</title>
+    <link rel="stylesheet" href="../default-gnrx-style.css">
+    <link rel="stylesheet" href="ruhs.css">
+    <link rel="icon" href="../branding/logo.png" type="image/png">
+</head>
+
+<body>
+<!-- header -->
+    <header>
+        <hr>
+        <div class="gnrx-header">
+            <img class="logo"
+                src="../branding/logo.png"
+                alt="generix logo"
+                width="100%"
+                height="100%">
+            Generix Music Education
+            <div class="socials">
+                <a class="invert" href="https://www.instagram.com/wgipercussion/">
+                    <img src="../branding/social media/instagram-logo.png"
+                        alt="instagram logo link to generix instagram"
+                        width=90%></a>
+                <a href="https://www.tiktok.com/@wgisportofthearts?is_from_webapp=1&sender_device=pc">
+                    <img src="../branding/social media/tiktok-logo.png"
+                        alt="tiktok logo link to generix tiktok"
+                        width=90%></a>
+                <a class="invert" href="https://www.facebook.com/WGIsportofthearts">
+                    <img src="../branding/social media/facebook-logo.png"
+                        alt="facebook logo link to generix facebook"
+                        width=90%></a>
+            </div>
+        </div>
+<!-- nav bar -->
+        <hr>
+        <nav>
+            <a class="link-style-nav" href="../index.html">Home</a> &nbsp;
+            <a class="link-style-nav" href="../about us/about-us.html">About Us</a> &nbsp;
+            <a class="link-style-nav" href="../gnrx shows/show-list.html">Generix Shows</a> &nbsp;
+            <a class="link-style-nav" href="ruhs.html">Redondo Union HS</a> &nbsp;
+            <a class="link-style-nav" href="https://www.marinaband.org/">Marina HS</a> &nbsp;
+            <a class="link-style-nav" href="../learning-resources.html">Learning Resources</a> &nbsp;
+            <a class="link-style-nav" href="../contact us/contact-us.html">Contact Us</a>
+        </nav>
+        <hr>
+    </header>
+<!-- main -->
+    <main>
+        <br>
+        <h1>Redondo Union High School</h1>
+        <br>
+<!-- ruhs perc banner photo -->
+        <img src="../troubleshooting/placeholders/banner-placeholder.jpg"
+            id="ruhs-banner"
+            alt="banner placeholder"
+            width="80%">
+        <p>Credit: <a href="https://www.vecteezy.com/photo/32106429-panorama-of-distant-planet-system-in-space-3d-rendering-elements-generative-ai">Md Baki Mia on Vecteezy</a></p>
+
+        <div id="ruhs-form">
+            <h2>Student Information Form</h2>
+            <p>Any fields with an asterisk * are required</p>
+            <form action="#" method="post">
+                <hr>
+
+                <label for="student-first-name">*Student First Name:</label>
+                <input type="text" id="student-first-name" name="studentFirstName" required>
+
+                <label for="student-last-name">*Student Last Name:</label>
+                <input type="text" id="student-last-name" name="studentLastName" required>
+
+                <label for="student-id">*Student ID:</label>
+                <input type="text" id="student-id" name="studentId" required>
+
+                <label for="student-year">*Student Year:</label>
+                <select id="student-year" name="studentYear" required>
+                    <option value="">Select Year</option>
+                    <option value="freshman">Freshman</option>
+                    <option value="sophmore">Sophmore</option>
+                    <option value="junior">Junior</option>
+                    <option value="senior">Senior</option>
+                </select>
+
+                <label for="instrument-section">Instrument Section:</label>
+                <select id="instrument-section" name="instrumentSection">
+                    <option value="">Select Section</option>
+                    <option value="battery">Battery</option>
+                    <option value="front-ensemble">Front Ensemble</option>
+                    <option value="not-assigned-yet">Not Assigned Yet</option>
+                </select>
+
+                <hr>
+
+                <label for="guardian-1-first-name">*Parent/Guardian 1 First Name:</label>
+                <input type="text" id="guardian-1-first-name" name="guardian1FirstName" required>
+
+                <label for="guardian-1-last-name">*Parent/Guardian 1 Last Name:</label>
+                <input type="text" id="guardian-1-last-name" name="guardian1LastName" required>
+
+                <label for="guardian-1-phone">*Parent/Guardian 1 Phone:</label>
+                <input
+                    type="tel"
+                    id="guardian-1-phone"
+                    name="guardian1Phone"
+                    inputmode="numeric"
+                    pattern="[0-9]{10}"
+                    maxlength="10"
+                    required>
+
+                <label for="guardian-1-email">*Parent/Guardian 1 Email:</label>
+                <input type="email" id="guardian-1-email" name="guardian1Email" required>
+
+                <label for="guardian-2-first-name">Parent/Guardian 2 First Name:</label>
+                <input type="text" id="guardian-2-first-name" name="guardian2FirstName">
+
+                <label for="guardian-2-last-name">Parent/Guardian 2 Last Name:</label>
+                <input type="text" id="guardian-2-last-name" name="guardian2LastName">
+
+                <label for="guardian-2-phone">Parent/Guardian 2 Phone:</label>
+                <input
+                    type="tel"
+                    id="guardian-2-phone"
+                    name="guardian2Phone"
+                    inputmode="numeric"
+                    pattern="[0-9]{10}"
+                    maxlength="10">
+
+                <label for="guardian-2-email">Parent/Guardian 2 Email:</label>
+                <input type="email" id="guardian-2-email" name="guardian2Email">
+
+                <hr>
+
+                <label for="emergency-first-name">Emergency Contact First Name:</label>
+                <input type="text" id="emergency-first-name" name="emergencyFirstName">
+
+                <label for="emergency-last-name">Emergency Contact Last Name:</label>
+                <input type="text" id="emergency-last-name" name="emergencyLastName">
+
+                <label for="emergency-phone">Emergency Contact Phone:</label>
+                <input
+                    type="tel"
+                    id="emergency-phone"
+                    name="emergencyPhone"
+                    inputmode="numeric"
+                    pattern="[0-9]{10}"
+                    maxlength="10">
+
+                <hr>
+                <button type="submit" class="link-style-1">Submit</button>
+            </form>
+        </div>
+    </main>
+<!-- footer -->
+    <footer>
+        <hr>
+        <br>
+        Copyright &copy; 2026 | Generix Music Education
+    </footer>
+    <hr>
+</body>
+</html>
