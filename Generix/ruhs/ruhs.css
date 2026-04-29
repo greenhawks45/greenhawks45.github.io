@@ -63,8 +63,8 @@ ol {
     margin: 0 auto;
     margin-bottom: 2.85vw;
 }
-/*Desktop Form*/
 
+/*Desktop Form*/
 
 form {
     display: grid;
@@ -101,7 +101,7 @@ form hr {
     display: none;
 }
 
-@media screen and (max-width:800px) {
+@media screen and (max-width:1200px) {
     /* Info + Transportation block */
     .info-transportation-block {
         flex-wrap: wrap;
@@ -115,6 +115,8 @@ form hr {
 }
 
 @media screen and (max-width:1530px) {
+    
+    /*Form*/
     form {
         display:flex;
         flex-direction: column;

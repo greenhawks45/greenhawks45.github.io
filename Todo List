@@ -1,6 +1,9 @@
 ////////////////////////////////////////////////////////////
 ///////////////////////////Tweaks///////////////////////////
 ////////////////////////////////////////////////////////////
+About Us:
+- make the titles flex elements so words dont split up onto multiple lines
+
 Re-evaluate grid implementation on these pages:
 - show-list.css
 - ruhs.css
@@ -11,7 +14,8 @@ change all css formatting to have multi references vertical rather than on one l
 ////////////////////////////////////////////////////////////
 ////////////////////////Major Stuff/////////////////////////
 ////////////////////////////////////////////////////////////
-Add data collection form onto ruhs student form button
+
+Change bio page to have photos / titles / names, but then use a go-to button for the bios
 
 Add learning resources page and add a graph to display scores of wgi groups throughout the 2026 season along with links to their shows.
 

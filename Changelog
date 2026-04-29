@@ -1,4 +1,46 @@
 ////////////////////////////////////////////////////////////
+Apr 28, 2026 - 5:35PM
+
+Learning Resources:
+- created the learning resources html
+- created the learning resources css
+- adjsuted the nav links on learning-resources.html to be functional
+- applied the css properly to the html
+- added title to page and subtitle for wgi scores
+- added table for wgi scores
+- added 1st through 5th palce info to table for the 2026 WGI season
+- added formatting to table
+
+Nav:
+- verified functionality of all nav links on all html pages
+
+All Links:
+- added rel="noopener noreferrer" to all external links
+
+About Us:
+- added "what is generix" p to the page
+- rearranged order of bios
+- reassigned brandon's role
+- added generix div + class for about generix segment
+- added top margin to h1 for spacing 
+
+All:
+- Edited Contact and Learning Resources h1 elements to be similar to other pages
+- Replaced background with a more accurate color scheme (black/space placeholder)
+- Updated p element margins to be 10% on both sides instead of 20%
+
+RUHS:
+- removed banner from student info form page
+- changed the onedrive sheet music links to open in a new tab
+- changed max width property to be 1530px for a single column instead of 800px being the limit
+- combine the two 1530px media queries into one block instead of two seperate ones
+- seperated the media queries again and made the double block into a 1200px max query
+
+Generix Shows:
+- added top margin to h1 for spacing
+
+Apr 29, 2026 - 2:00AM
+////////////////////////////////////////////////////////////
 Apr 23, 2026 - 1:50AM
 
 Contact Us:
@@ -57,3 +99,5 @@ Changelog:
 
 Apr 8, 2026 - 3:59AM
 ////////////////////////////////////////////////////////////
+
+A lot of work was done before this but unfortunately I did not log it until this first entry.

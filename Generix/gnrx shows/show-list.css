@@ -7,6 +7,7 @@ main > br {
 }
 
 h1 {
+    margin-top: 2.5rem;
     grid-row: 1;
 }
 
@@ -28,7 +29,9 @@ h1 {
     grid-row: 5;
 }
 
-.artemis, .show1, .show2 {
+.artemis,
+.show1,
+.show2 {
     width: 80%;
 
     display: grid;
@@ -176,7 +179,8 @@ b {
     font-size: larger;
 }
 
-.instrumentation-battery b, .instrumentation-fe b {
+.instrumentation-battery b,
+.instrumentation-fe b {
     position: relative;
     top: -0.66rem;
     right: 1.25rem;
