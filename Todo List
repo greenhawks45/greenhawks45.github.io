@@ -1,6 +1,7 @@
 ////////////////////////////////////////////////////////////
 ///////////////////////////Tweaks///////////////////////////
 ////////////////////////////////////////////////////////////
+
 About Us:
 - make the titles flex elements so words dont split up onto multiple lines
 
@@ -10,10 +11,11 @@ Re-evaluate grid implementation on these pages:
 
 try this clamp for text sizing: clamp(1.5rem, 4vw + 1rem, 3rem);
 
-change all css formatting to have multi references vertical rather than on one line
 ////////////////////////////////////////////////////////////
 ////////////////////////Major Stuff/////////////////////////
 ////////////////////////////////////////////////////////////
+All:
+- change all possible align-self / align-content to be a part of default-style-css since most of the site is aligned center
 
 Change bio page to have photos / titles / names, but then use a go-to button for the bios
 

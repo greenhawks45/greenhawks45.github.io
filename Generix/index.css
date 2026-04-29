@@ -9,15 +9,19 @@ main {
     gap: 2rem;
 }
 
+h1 {
+    align-self: center;
+}
+
 .banner-container {
     width: 100%;
     background-color: var(--background);
-    border-radius: 12px;
+    border-radius: var(--border-radius);
     border: var(--border);
 }
 
 .slideshow-banner {
-    border-radius: 12px;
+    border-radius: var(--border-radius);
     width: 100%;
     height: 20.6vw;
     background-size: contain;
@@ -32,11 +36,16 @@ main {
   66%, 100% { background-image: url('../Generix/troubleshooting/placeholders/banner-placeholder-3.jpg'); }
 }
 
-.home {
+.announcement {
     align-self: flex-start;
 
     width: 100%;
     background-color: var(--background);
-    border-radius: 12px;
+    border-radius: var(--border-radius);
     border: var(--border);
+ }
+
+ ul {
+    text-align: left;
+    justify-self: center;
  }

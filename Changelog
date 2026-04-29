@@ -1,4 +1,20 @@
 ////////////////////////////////////////////////////////////
+Apr 29, 2026 - 2:43PM
+
+Index (Home/Announcements):
+- added announcement header
+- added h1 alignment center
+- added showcase announcement
+- added torchrun announcement
+- added rosebowl announcement
+
+Changelog:
+- corrected capitalization formatting
+- added a change made yesterday that i just remembered about but didnt log
+
+
+Apr 29, 2026 - 4:01PM
+////////////////////////////////////////////////////////////
 Apr 28, 2026 - 5:35PM
 
 Learning Resources:
@@ -25,9 +41,10 @@ About Us:
 - added top margin to h1 for spacing 
 
 All:
-- Edited Contact and Learning Resources h1 elements to be similar to other pages
-- Replaced background with a more accurate color scheme (black/space placeholder)
-- Updated p element margins to be 10% on both sides instead of 20%
+- edited contact and learning resources h1 elements to be similar to other pages
+- replaced background with a more accurate color scheme (black/space placeholder)
+- updated p element margins to be 10% on both sides instead of 20%
+- changed all css formatting to have multi-references vertical rather than on one line
 
 RUHS:
 - removed banner from student info form page
