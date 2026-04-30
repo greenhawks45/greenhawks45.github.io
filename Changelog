@@ -1,6 +1,9 @@
 ////////////////////////////////////////////////////////////
 Apr 29, 2026 - 2:43PM
 
+All:
+- added alt text for all images
+
 Index (Home/Announcements):
 - added announcement header
 - added h1 alignment center
@@ -12,8 +15,10 @@ Changelog:
 - corrected capitalization formatting
 - added a change made yesterday that i just remembered about but didnt log
 
+RUHS Form:
+- removed bottom margin of #ruhs-forms p
 
-Apr 29, 2026 - 4:01PM
+Apr 29, 2026 - 5:12PM
 ////////////////////////////////////////////////////////////
 Apr 28, 2026 - 5:35PM
 

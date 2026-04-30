@@ -141,4 +141,8 @@ form hr {
         background-color: var(--background);
         border-width: 2px;
     }
+
+    #ruhs-form p {
+        margin-bottom: 0;
+    }
 }
