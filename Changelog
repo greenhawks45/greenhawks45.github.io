@@ -4,7 +4,8 @@ Apr 29, 2026 - 2:43PM
 All:
 - added alt text for all images
 - added meta tags for all pages
-- add google analytics tag to every html page
+- add google analytics tag to every html page after </head>
+- corrected each google analytic to be after each <head> element
 
 Index (Home/Announcements):
 - added announcement header
@@ -20,7 +21,7 @@ Changelog:
 RUHS Form:
 - removed bottom margin of #ruhs-forms p
 
-Apr 29, 2026 - 5:12PM
+Apr 29, 2026 - 6:55PM
 ////////////////////////////////////////////////////////////
 Apr 28, 2026 - 5:35PM
 
