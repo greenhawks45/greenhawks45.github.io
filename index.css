@@ -31,9 +31,9 @@ h1 {
 }
 
 @keyframes slideImages {
-  0%, 30% { background-image: url('../Generix/troubleshooting/placeholders/banner-placeholder.jpg'); }
-  33%, 63% { background-image: url('../Generix/troubleshooting/placeholders/banner-placeholder-2.jpg'); }
-  66%, 100% { background-image: url('../Generix/troubleshooting/placeholders/banner-placeholder-3.jpg'); }
+  0%, 30% { background-image: url('troubleshooting/placeholders/banner-placeholder.jpg'); }
+  33%, 63% { background-image: url('troubleshooting/placeholders/banner-placeholder-2.jpg'); }
+  66%, 100% { background-image: url('troubleshooting/placeholders/banner-placeholder-3.jpg'); }
 }
 
 .announcement {
