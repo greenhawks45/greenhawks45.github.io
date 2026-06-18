@@ -148,16 +148,15 @@ nav {
     position: relative;
     display: flex;
     flex: 1;
-    min-width: 0;
+    min-width: min-content;
 }
 
 .nav-dropdown-label {
     cursor: default;
-    min-width: 0;
     width: 100%;
-    white-space: normal;
-    overflow-wrap: anywhere;
-
+    word-break: keep-all;
+    box-sizing: border-box;
+    padding: 8px;
 }
 
 /*changes text color of label while any part of the drop down is hovered*/
