@@ -111,7 +111,7 @@ nav {
     display: flex;
     flex-wrap: wrap;
     box-sizing: border-box;
-    row-gap: 8px;
+    gap: 8px;
 
     padding: 16px;
     text-align: center;
@@ -129,6 +129,9 @@ nav {
     font-weight: bold;
     font-size: 100%;
 
+    /*font family override for dropdown menus using the button class*/
+    font-family: inherit;
+
     color: var(--link);
     width: fit-content;
     padding: 8px;
@@ -137,6 +140,81 @@ nav {
     border: var(--border);
     background-color: var(--background);
 }
+
+
+
+
+.nav-dropdown {
+    position: relative;
+    display: flex;
+    flex: 1;
+    min-width: 0;
+}
+
+.nav-dropdown-label {
+    cursor: default;
+    min-width: 0;
+    width: 100%;
+    white-space: normal;
+    overflow-wrap: anywhere;
+
+}
+
+/*changes text color of label while any part of the drop down is hovered*/
+.nav-dropdown:hover .nav-dropdown-label {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    color: var(--hover);
+}
+
+.nav-dropdown-content {
+    display: none;
+    position: absolute;
+    top: 95%;
+    /*lines up the left side of the drop down with its parent, nav-dropdown*/
+    left: 0;
+    /*Just incase something is layered infront of default layer, then the z-index forces the menus to the front*/
+    z-index: 20;
+    width: 100%;
+
+    box-sizing: border-box;
+    
+    border-radius: var(--border-radius);
+    /*sets top radius of dropdown content to 0*/
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border: var(--border);
+    /*sets top border of dropdown content to be a thin divder instead*/
+    border-top: 1px solid var(--header);
+
+    background-color: var(--background);
+    overflow: hidden;
+}
+
+.nav-dropdown-content a {
+    display: block;
+    padding: 8px;
+
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 100%;
+    font-family: inherit;
+    color: var(--link);
+}
+
+.nav-dropdown-content a + a {
+    border-top: 1px solid var(--header);
+}
+
+.nav-dropdown:hover .nav-dropdown-content,
+.nav-dropdown:focus-within .nav-dropdown-content {
+    display: block;
+}
+
+
+
+
+
 
 /* Titles */
 h1, h2, h3, h4, h5, h6 {
