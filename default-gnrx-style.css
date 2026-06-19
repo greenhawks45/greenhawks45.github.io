@@ -159,13 +159,6 @@ nav {
     padding: 8px;
 }
 
-/*changes text color of label while any part of the drop down is hovered*/
-.nav-dropdown:hover .nav-dropdown-label {
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    color: var(--hover);
-}
-
 .nav-dropdown-content {
     display: none;
     position: absolute;
@@ -205,9 +198,32 @@ nav {
     border-top: 1px solid var(--header);
 }
 
-.nav-dropdown:hover .nav-dropdown-content,
-.nav-dropdown:focus-within .nav-dropdown-content {
-    display: block;
+@media (hover: hover) and (pointer: fine) {
+    .nav-dropdown:hover .nav-dropdown-label {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        color: var(--hover);
+    }
+
+    .nav-dropdown:hover .nav-dropdown-content {
+        display: block;
+    }
+}
+
+@media (hover: none), (pointer: coarse) {
+    .nav-dropdown-label {
+        cursor: pointer;
+    }
+
+    .nav-dropdown:focus-within .nav-dropdown-label {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        color: var(--hover);
+    }
+
+    .nav-dropdown:focus-within .nav-dropdown-content {
+        display: block;
+    }
 }
 
 
