@@ -141,9 +141,7 @@ nav {
     background-color: var(--background);
 }
 
-
-
-
+/*nav dropdown*/
 .nav-dropdown {
     position: relative;
     display: flex;
@@ -162,7 +160,8 @@ nav {
 .nav-dropdown-content {
     display: none;
     position: absolute;
-    top: 95%;
+    /*Hides a bit of the bottom of the nav element with the dropdown menu*/
+    top: 90%;
     /*lines up the left side of the drop down with its parent, nav-dropdown*/
     left: 0;
     /*Just incase something is layered infront of default layer, then the z-index forces the menus to the front*/
@@ -225,11 +224,6 @@ nav {
         display: block;
     }
 }
-
-
-
-
-
 
 /* Titles */
 h1, h2, h3, h4, h5, h6 {
