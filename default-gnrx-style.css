@@ -215,13 +215,13 @@ nav {
         cursor: pointer;
     }
 
-    .nav-dropdown:focus-within .nav-dropdown-label {
+    .nav-dropdown.is-open .nav-dropdown-label {
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
         color: var(--hover);
     }
 
-    .nav-dropdown:focus-within .nav-dropdown-content {
+    .nav-dropdown.is-open .nav-dropdown-content {
         display: block;
     }
 }

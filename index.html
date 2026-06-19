@@ -52,8 +52,8 @@
             <a class="link-style-nav" href="gnrx shows/show-list.html">Generix Shows</a>
             <!--ruhs dropdown menu-->
             <div class="nav-dropdown">
-                <button class="link-style-nav nav-dropdown-label">Redondo Union HS</button>
-                <div class="nav-dropdown-content">
+                <button class="link-style-nav nav-dropdown-label" type="button" aria-expanded="false" aria-controls="ruhs-dropdown-menu">Redondo Union HS</button>
+                <div class="nav-dropdown-content" id="ruhs-dropdown-menu">
                     <a href="ruhs/ruhs.html">RUHS 1</a>
                     <a href="ruhs/ruhs.html">RUHS 2</a>
                     <a href="ruhs/ruhs_forms.html">Forms</a>
@@ -120,5 +120,55 @@
         Copyright &copy; 2026 | Generix Music Education
     </footer>
     <hr>
+
+    <script>
+        // Touch/mobile behavior: tap button to toggle dropdown.
+        (function () {
+            var touchMediaQuery = window.matchMedia('(hover: none), (pointer: coarse)');
+            var dropdown = document.querySelector('.nav-dropdown');
+            if (!dropdown) return;
+
+            var button = dropdown.querySelector('.nav-dropdown-label');
+            if (!button) return;
+
+            function setOpen(isOpen) {
+                dropdown.classList.toggle('is-open', isOpen);
+                button.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            }
+
+            function closeIfDesktop(event) {
+                if (event.matches === false) {
+                    setOpen(false);
+                }
+            }
+
+            button.addEventListener('click', function (event) {
+                if (!touchMediaQuery.matches) return;
+
+                event.preventDefault();
+                event.stopPropagation();
+                setOpen(!dropdown.classList.contains('is-open'));
+            });
+
+            document.addEventListener('click', function (event) {
+                if (!touchMediaQuery.matches) return;
+                if (!dropdown.contains(event.target)) {
+                    setOpen(false);
+                }
+            });
+
+            document.addEventListener('keydown', function (event) {
+                if (event.key === 'Escape') {
+                    setOpen(false);
+                }
+            });
+
+            if (typeof touchMediaQuery.addEventListener === 'function') {
+                touchMediaQuery.addEventListener('change', closeIfDesktop);
+            } else if (typeof touchMediaQuery.addListener === 'function') {
+                touchMediaQuery.addListener(closeIfDesktop);
+            }
+        })();
+    </script>
 </body>
 </html>
