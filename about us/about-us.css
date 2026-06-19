@@ -81,28 +81,8 @@ h1 {
     background-image: url("staff photos/jacobmills.jpg");
 }
 
-#aidanminear {
-    background-image: url("../troubleshooting/placeholders/square-placeholder.jpg");
-}
-
-#brandonchang {
-    background-image: url("staff photos/brandonchang.png");
-}
-
 #masonnguyen {
     background-image: url("staff photos/masonnguyen.png");
     background-position: center 38%;
     filter: invert(87.5%);
-}
-
-#victoriamanos {
-    background-image: url("../troubleshooting/placeholders/square-placeholder.jpg");
-}
-
-#leoknapp {
-    background-image: url("../troubleshooting/placeholders/square-placeholder.jpg");
-}
-
-#raymundoc {
-    background-image: url("../troubleshooting/placeholders/square-placeholder.jpg");
 }
