@@ -123,6 +123,17 @@ ol {
     margin-bottom: 2.85vw;
 }
 
+@media screen and (max-width:1200px) {
+    /* Info + Transportation block */
+    .double-block {
+        flex-wrap: wrap;
+    }
+
+    .blocks {
+        flex-grow: 1;
+        flex-basis: 100%;
+    }
+}
 
 
 
@@ -182,36 +193,24 @@ form hr {
 
 #desktop-hr {
     display: block;
-    width: 70vw;
+    width: 70%;
     margin: 0 10vw;
 }
 
 /*phone/tablet versions*/
-@media screen and (max-width:1200px) {
-    /* Info + Transportation block */
-    .double-block {
-        flex-wrap: wrap;
-    }
-
-    .blocks {
-        flex-grow: 1;
-        flex-basis: 100%;
-    }
-}
-
 @media screen and (max-width:1530px) {
     
     /*Form*/
     form {
-        display:flex;
         flex-direction: column;
-        padding-left: 15vw;
-        padding-right: 15vw;
-        text-align: center;
     }
+    
     .form-block {
         flex: 0 0 100%;
+
+        margin: 0 auto;
     }
+
     form input,
     form select,
     form textarea {
@@ -219,12 +218,10 @@ form hr {
     text-align: center;
     }
 
-    form hr {
-        margin-top: 2vh;
-        margin-bottom: 2vh;
-        padding: auto;
+    form hr, #desktop-hr {
+        margin: 0 10%;
         display: block;
-        width: 120%;
+        width: 80%;
         height: 0.25vh;
         background-color: var(--background);
         border-width: 2px;

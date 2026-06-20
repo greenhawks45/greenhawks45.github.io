@@ -162,20 +162,21 @@
 
                 <div class="form-block">
                     <h3>Emergency Contact #1 Info</h3>
-                    <label for="emergency-first-name">Emergency Contact First Name:</label>
-                    <input type="text" id="emergency-first-name" name="emergencyFirstName">
+                    <label for="emergency-first-name">*Emergency Contact First Name:</label>
+                    <input type="text" id="emergency-first-name" name="emergencyFirstName" required>
 
-                    <label for="emergency-last-name">Emergency Contact Last Name:</label>
-                    <input type="text" id="emergency-last-name" name="emergencyLastName">
+                    <label for="emergency-last-name">*Emergency Contact Last Name:</label>
+                    <input type="text" id="emergency-last-name" name="emergencyLastName" required>
 
-                    <label for="emergency-phone">Emergency Contact Phone:</label>
+                    <label for="emergency-phone">*Emergency Contact Phone:</label>
                     <input
                         type="tel"
                         id="emergency-phone"
                         name="emergencyPhone"
                         inputmode="numeric"
                         pattern="[0-9]{10}"
-                        maxlength="10">
+                        maxlength="10"
+                        required>
                 </div>
 
                 <div class="form-block">
