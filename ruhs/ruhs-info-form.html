@@ -47,12 +47,19 @@
 <!-- nav bar -->
         <hr>
         <nav>
-            <a class="link-style-nav" href="../index.html">Home</a> &nbsp;
-            <a class="link-style-nav" href="../about us/about-us.html">About Us</a> &nbsp;
-            <a class="link-style-nav" href="../gnrx shows/show-list.html">Generix Shows</a> &nbsp;
-            <a class="link-style-nav" href="ruhs.html">Redondo Union HS</a> &nbsp;
-            <a class="link-style-nav" href="https://www.marinaband.org/" target="_blank" rel="noopener noreferrer">Marina HS</a> &nbsp;
-            <a class="link-style-nav" href="../learning resources/learning-resources.html">Learning Resources</a> &nbsp;
+            <a class="link-style-nav" href="../index.html">Home</a>
+            <a class="link-style-nav" href="../about us/about-us.html">About Us</a>
+            <a class="link-style-nav" href="../gnrx shows/show-list.html">Generix Shows</a>
+            <!--ruhs dropdown menu-->
+            <div class="nav-dropdown">
+                <button class="link-style-nav nav-dropdown-label" type="button" aria-expanded="false" aria-controls="ruhs-dropdown-menu">Affiliate Schools</button>
+                <div class="nav-dropdown-content" id="ruhs-dropdown-menu">
+                    <a href="ruhs.html">Redondo Union HS</a>
+                    <a href="ruhs.html">Narbonne HS</a>
+                    <a href="https://www.marinaband.org/" target="_blank" rel="noopener noreferrer">Marina HS</a>
+                </div>
+            </div>
+
             <a class="link-style-nav" href="../contact us/contact-us.html">Contact Us</a>
         </nav>
         <hr>
@@ -67,91 +74,132 @@
             <h2>Student Information Form</h2>
             <p>Any fields with an asterisk * are required</p>
             <form action="#" method="post">
-                <hr>
+                <hr id="desktop-hr">
+                <div class="form-block">
+                    <h3>Student Info</h3>
 
-                <label for="student-first-name">*Student First Name:</label>
-                <input type="text" id="student-first-name" name="studentFirstName" required>
+                    <label for="student-first-name">*Student First Name:</label>
+                    <input type="text" id="student-first-name" name="studentFirstName" required>
 
-                <label for="student-last-name">*Student Last Name:</label>
-                <input type="text" id="student-last-name" name="studentLastName" required>
+                    <label for="student-last-name">*Student Last Name:</label>
+                    <input type="text" id="student-last-name" name="studentLastName" required>
 
-                <label for="student-id">*Student ID:</label>
-                <input type="text" id="student-id" name="studentId" required>
+                    <label for="student-id">*Student ID:</label>
+                    <p class="form-comment">If you do not have an RUHS student ID please type "NA"</p>
+                    <input type="text" id="student-id" name="studentId" required>
 
-                <label for="student-year">*Student Year:</label>
-                <select id="student-year" name="studentYear" required>
-                    <option value="">Select Year</option>
-                    <option value="freshman">Freshman</option>
-                    <option value="sophmore">Sophmore</option>
-                    <option value="junior">Junior</option>
-                    <option value="senior">Senior</option>
-                </select>
+                    <label for="student-year">*Student Year:</label>
+                    <select id="student-year" name="studentYear" required>
+                        <option value="">Select Year</option>
+                        <option value="senior">Middle School</option>
+                        <option value="freshman">Freshman</option>
+                        <option value="sophmore">Sophmore</option>
+                        <option value="junior">Junior</option>
+                        <option value="senior">Senior</option>
+                    </select>
 
-                <label for="instrument-section">Instrument Section:</label>
-                <select id="instrument-section" name="instrumentSection">
-                    <option value="">Select Section</option>
-                    <option value="battery">Battery</option>
-                    <option value="front-ensemble">Front Ensemble</option>
-                    <option value="not-assigned-yet">Not Assigned Yet</option>
-                </select>
+                    <label for="instrument-section">Instrument Section:</label>
+                    <select id="instrument-section" name="instrumentSection">
+                        <option value="">Select Section</option>
+                        <option value="battery">Battery</option>
+                        <option value="front-ensemble">Front Ensemble</option>
+                        <option value="not-assigned-yet">Not Assigned Yet</option>
+                    </select>
 
-                <hr>
+                    <label for="music-experience">Prior Music Experience:</label>
+                    <input type="text" id="music-experience" name="music-experience">
 
-                <label for="guardian-1-first-name">*Parent/Guardian 1 First Name:</label>
-                <input type="text" id="guardian-1-first-name" name="guardian1FirstName" required>
+                    <label for="middle-school">Middle School Attended:</label>
+                    <input type="text" id="middle-school" name="middle-school">
+                    
+                </div>
 
-                <label for="guardian-1-last-name">*Parent/Guardian 1 Last Name:</label>
-                <input type="text" id="guardian-1-last-name" name="guardian1LastName" required>
-
-                <label for="guardian-1-phone">*Parent/Guardian 1 Phone:</label>
-                <input
-                    type="tel"
-                    id="guardian-1-phone"
-                    name="guardian1Phone"
-                    inputmode="numeric"
-                    pattern="[0-9]{10}"
-                    maxlength="10"
-                    required>
-
-                <label for="guardian-1-email">*Parent/Guardian 1 Email:</label>
-                <input type="email" id="guardian-1-email" name="guardian1Email" required>
-
-                <label for="guardian-2-first-name">Parent/Guardian 2 First Name:</label>
-                <input type="text" id="guardian-2-first-name" name="guardian2FirstName">
-
-                <label for="guardian-2-last-name">Parent/Guardian 2 Last Name:</label>
-                <input type="text" id="guardian-2-last-name" name="guardian2LastName">
-
-                <label for="guardian-2-phone">Parent/Guardian 2 Phone:</label>
-                <input
-                    type="tel"
-                    id="guardian-2-phone"
-                    name="guardian2Phone"
-                    inputmode="numeric"
-                    pattern="[0-9]{10}"
-                    maxlength="10">
-
-                <label for="guardian-2-email">Parent/Guardian 2 Email:</label>
-                <input type="email" id="guardian-2-email" name="guardian2Email">
 
                 <hr>
 
-                <label for="emergency-first-name">Emergency Contact First Name:</label>
-                <input type="text" id="emergency-first-name" name="emergencyFirstName">
+                
+                <div class="form-block">
+                    <h3>Parent/Guardian Info</h3>
 
-                <label for="emergency-last-name">Emergency Contact Last Name:</label>
-                <input type="text" id="emergency-last-name" name="emergencyLastName">
+                    <label for="guardian-1-first-name">*Parent / Guardian 1 First Name:</label>
+                    <input type="text" id="guardian-1-first-name" name="guardian1FirstName" required>
 
-                <label for="emergency-phone">Emergency Contact Phone:</label>
-                <input
-                    type="tel"
-                    id="emergency-phone"
-                    name="emergencyPhone"
-                    inputmode="numeric"
-                    pattern="[0-9]{10}"
-                    maxlength="10">
+                    <label for="guardian-1-last-name">*Parent / Guardian 1 Last Name:</label>
+                    <input type="text" id="guardian-1-last-name" name="guardian1LastName" required>
 
-                <hr>
+                    <label for="guardian-1-phone">*Parent / Guardian 1 Phone:</label>
+                    <input
+                        type="tel"
+                        id="guardian-1-phone"
+                        name="guardian1Phone"
+                        inputmode="numeric"
+                        pattern="[0-9]{10}"
+                        maxlength="10"
+                        required>
+
+                    <label for="guardian-1-email">*Parent / Guardian 1 Email:</label>
+                    <input type="email" id="guardian-1-email" name="guardian1Email" required>
+
+                    <label for="guardian-2-first-name">Parent / Guardian 2 First Name:</label>
+                    <input type="text" id="guardian-2-first-name" name="guardian2FirstName">
+
+                    <label for="guardian-2-last-name">Parent / Guardian 2 Last Name:</label>
+                    <input type="text" id="guardian-2-last-name" name="guardian2LastName">
+
+                    <label for="guardian-2-phone">Parent / Guardian 2 Phone:</label>
+                    <input
+                        type="tel"
+                        id="guardian-2-phone"
+                        name="guardian2Phone"
+                        inputmode="numeric"
+                        pattern="[0-9]{10}"
+                        maxlength="10">
+
+                    <label for="guardian-2-email">Parent / Guardian 2 Email:</label>
+                    <input type="email" id="guardian-2-email" name="guardian2Email">
+                </div>
+
+                <hr id="desktop-hr">
+
+                <div class="form-block">
+                    <h3>Emergency Contact #1 Info</h3>
+                    <label for="emergency-first-name">Emergency Contact First Name:</label>
+                    <input type="text" id="emergency-first-name" name="emergencyFirstName">
+
+                    <label for="emergency-last-name">Emergency Contact Last Name:</label>
+                    <input type="text" id="emergency-last-name" name="emergencyLastName">
+
+                    <label for="emergency-phone">Emergency Contact Phone:</label>
+                    <input
+                        type="tel"
+                        id="emergency-phone"
+                        name="emergencyPhone"
+                        inputmode="numeric"
+                        pattern="[0-9]{10}"
+                        maxlength="10">
+                </div>
+
+                <div class="form-block">
+                    <h3>Emergency Contact #2 Info</h3>
+                    <label for="emergency-first-name">Emergency Contact First Name:</label>
+                    <input type="text" id="emergency-first-name" name="emergencyFirstName">
+
+                    <label for="emergency-last-name">Emergency Contact Last Name:</label>
+                    <input type="text" id="emergency-last-name" name="emergencyLastName">
+
+                    <label for="emergency-phone">Emergency Contact Phone:</label>
+                    <input
+                        type="tel"
+                        id="emergency-phone"
+                        name="emergencyPhone"
+                        inputmode="numeric"
+                        pattern="[0-9]{10}"
+                        maxlength="10">
+                </div>
+
+
+                <hr id="desktop-hr">
+                <br>
                 <button type="submit" class="link-style-1">Submit</button>
             </form>
         </div>

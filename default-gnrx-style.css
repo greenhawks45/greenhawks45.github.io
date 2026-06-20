@@ -265,7 +265,8 @@ a:hover {
 
 .link-style-1  {
     display: flex;
-    justify-self: center;
+    /*Centers the link in flex, justify: center was for grid which doesnt always work on mobile*/
+    margin: 0 auto;
 
     text-decoration: none;
     font-weight: bold;

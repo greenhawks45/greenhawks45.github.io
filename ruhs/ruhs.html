@@ -47,12 +47,19 @@
 <!-- nav bar -->
         <hr>
         <nav>
-            <a class="link-style-nav" href="../index.html">Home</a> &nbsp;
-            <a class="link-style-nav" href="../about us/about-us.html">About Us</a> &nbsp;
-            <a class="link-style-nav" href="../gnrx shows/show-list.html">Generix Shows</a> &nbsp;
-            <a class="link-style-nav" href="ruhs.html">Redondo Union HS</a> &nbsp;
-            <a class="link-style-nav" href="https://www.marinaband.org/" target="_blank" rel="noopener noreferrer">Marina HS</a> &nbsp;
-            <a class="link-style-nav" href="../learning resources/learning-resources.html">Learning Resources</a> &nbsp;
+            <a class="link-style-nav" href="../index.html">Home</a>
+            <a class="link-style-nav" href="../about us/about-us.html">About Us</a>
+            <a class="link-style-nav" href="../gnrx shows/show-list.html">Generix Shows</a>
+            <!--ruhs dropdown menu-->
+            <div class="nav-dropdown">
+                <button class="link-style-nav nav-dropdown-label" type="button" aria-expanded="false" aria-controls="ruhs-dropdown-menu">Affiliate Schools</button>
+                <div class="nav-dropdown-content" id="ruhs-dropdown-menu">
+                    <a href="ruhs/ruhs.html">Redondo Union HS</a>
+                    <a href="ruhs/ruhs.html">Narbonne HS</a>
+                    <a href="https://www.marinaband.org/" target="_blank" rel="noopener noreferrer">Marina HS</a>
+                </div>
+            </div>
+
             <a class="link-style-nav" href="../contact us/contact-us.html">Contact Us</a>
         </nav>
         <hr>
@@ -75,19 +82,40 @@
             </div>
         </div>
 
+<!-- music / media -->
+        <div class="double-block">
+            <!-- sheet music -->
+            <div class="blocks">
+                <h2>Sheet Music</h2>
+                    <a class="link-style-1" href="https://1drv.ms/f/c/1f26e08424b49ee0/IgABmoIG5uNsS7CdrgPaj0LWAcxaE9L4j32ANvEJqQuQirg"  target="_blank" rel="noopener noreferrer">Show Music</a> &nbsp;
+                    <a class="link-style-1" href="https://1drv.ms/f/c/1f26e08424b49ee0/IgDgnrQkhOAmIIAfbVEAAAAAAc5ff41JO4UzWuD6zpmSIOA" target="_blank" rel="noopener noreferrer">Battery Warmups</a> &nbsp;
+                    <a class="link-style-1" href="https://1drv.ms/f/c/1f26e08424b49ee0/IgDgnrQkhOAmIIAfblEAAAAAARJlbOPnriuCHX2b-iqZsBw" target="_blank" rel="noopener noreferrer">Front Ensemble Warmups</a>
+            </div>
+            <!-- Photos / Videos -->
+            <div class="blocks">
+                <h2>Photos & Videos</h2>
+                    <a class="link-style-1" href="https://1drv.ms/f/c/1f26e08424b49ee0/IgABmoIG5uNsS7CdrgPaj0LWAcxaE9L4j32ANvEJqQuQirg"  target="_blank" rel="noopener noreferrer">Competition Media</a> &nbsp;
+                    <a class="link-style-1" href="https://1drv.ms/f/c/1f26e08424b49ee0/IgDgnrQkhOAmIIAfbVEAAAAAAc5ff41JO4UzWuD6zpmSIOA" target="_blank" rel="noopener noreferrer">Rehearsal Media</a> &nbsp;
+                    <a class="link-style-1" href="https://1drv.ms/f/c/1f26e08424b49ee0/IgDgnrQkhOAmIIAfblEAAAAAARJlbOPnriuCHX2b-iqZsBw" target="_blank" rel="noopener noreferrer">Misc. Media</a>
+            </div>
+        </div>
+
 <!-- info + transportation block -->
-        <div class="info-transportation-block">
-<!-- student information form -->
-            <div class="information-form">
-                <h2>Student Information Form</h2>
-                <p>This form is for current RUHS students who are interested in being a part of the RUHS percussion program. We use this info to reach out to the provided email with audition dates, announcements, and schedule updates throughout the season. We will only use the emergency contact info that you provide us  when we go to competitions throughout the season.</p>
-                <p>***Only Redondo Union High School band staff members will have access to the information you provide and it will only be used for band related communications or medical emergencies.</p>
+        <div class="double-block">
+            <!-- student information form -->
+            <div class="blocks">
+                <h2>Student Information</h2>
+                <p>This form is for all interested, current, and new students!<p>
+                <p>We will use the information you provide to reach out regarding audition dates, announcements, and schedule updates throughout the season.</p>
+                <p>We will only use the emergency contact info that you provide us  when we go to competitions.</p>
+                <p>Only RUHS Staff will have access to any information you provide.</p>
                 
                 <a class="link-style-1" href="ruhs-info-form.html">Info Form</a>
             </div>
-<!-- transportation/liability forms -->
-            <div class="transportation-form">
-                <h2>RUHS Transportation Form</h2>
+            <!-- transportation/liability forms -->
+            <div class="blocks" id="transportation-form">
+                <h2>Transportation Form</h2>
+                <h3><i>2025 - 2026</i></h3>
                 <p>Please fill out one transportation form per competition and submit them <a href="" rel="noopener noreferrer">here</a>. <em>ALL</em> students must have a form filled out, even if their own parent/guardian is driving them!</p>
                 <p>2026 Indoor season competitions that require a transportation form:
                     <ol>
@@ -98,17 +126,10 @@
                         <li>AB Miller HS - 4/25/2026</li>
                     </ol>
                 </p>
-
                 <a class="link-style-1" href="resources/RUHS-Alternate-Transportation-Form.pdf">RUHS Alternate<br>Transportation Form</a>
             </div>
         </div>
-<!-- sheet music -->
-        <div class="sheet-music">
-            <h2>Sheet Music</h2>
-                <a class="link-style-1" href="https://1drv.ms/f/c/1f26e08424b49ee0/IgABmoIG5uNsS7CdrgPaj0LWAcxaE9L4j32ANvEJqQuQirg"  target="_blank" rel="noopener noreferrer">Show Music</a> &nbsp;
-                <a class="link-style-1" href="https://1drv.ms/f/c/1f26e08424b49ee0/IgDgnrQkhOAmIIAfbVEAAAAAAc5ff41JO4UzWuD6zpmSIOA" target="_blank" rel="noopener noreferrer">Battery Warmups</a> &nbsp;
-                <a class="link-style-1" href="https://1drv.ms/f/c/1f26e08424b49ee0/IgDgnrQkhOAmIIAfblEAAAAAARJlbOPnriuCHX2b-iqZsBw" target="_blank" rel="noopener noreferrer">Front Ensemble Warmups</a>
-        </div>
+
 <!-- calendar -->
         <div class="ruhs-calendar">
             <h2>Percussion Calendar</h2>
