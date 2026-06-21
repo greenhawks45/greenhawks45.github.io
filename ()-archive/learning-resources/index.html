@@ -31,15 +31,15 @@
             Generix Music Education
             <div class="socials">
                 <a class="invert" href="https://www.instagram.com/wgipercussion/" rel="noopener noreferrer">
-                    <img src="../branding/social media/instagram-logo.png"
+                    <img src="../branding/social-media/instagram-logo.png"
                         alt="instagram logo link to generix instagram"
                         width=90%></a>
                 <a href="https://www.tiktok.com/@wgisportofthearts?is_from_webapp=1&sender_device=pc" rel="noopener noreferrer">
-                    <img src="../branding/social media/tiktok-logo.png"
+                    <img src="../branding/social-media/tiktok-logo.png"
                         alt="tiktok logo link to generix tiktok"
                         width=90%></a>
                 <a class="invert" href="https://www.facebook.com/WGIsportofthearts" rel="noopener noreferrer">
-                    <img src="../branding/social media/facebook-logo.png"
+                    <img src="../branding/social-media/facebook-logo.png"
                         alt="facebook logo link to generix facebook"
                         width=90%></a>
             </div>
@@ -47,20 +47,20 @@
 <!-- nav bar -->
         <hr>
         <nav>
-            <a class="link-style-nav" href="index.html">Home</a>
-            <a class="link-style-nav" href="about us/about-us.html">About Us</a>
-            <a class="link-style-nav" href="gnrx shows/show-list.html">Generix Shows</a>
+            <a class="link-style-nav" href="./">Home</a>
+            <a class="link-style-nav" href="about-us/">About Us</a>
+            <a class="link-style-nav" href="gnrx-shows/">Generix Shows</a>
             <!--ruhs dropdown menu-->
             <div class="nav-dropdown">
-                <button class="link-style-nav nav-dropdown-label" type="button" aria-expanded="false" aria-controls="ruhs-dropdown-menu">Affiliate Schools</button>
-                <div class="nav-dropdown-content" id="ruhs-dropdown-menu">
-                    <a href="ruhs/ruhs.html">Redondo Union HS</a>
-                    <a href="ruhs/ruhs.html">Narbonne HS</a>
+                <button class="link-style-nav nav-dropdown-label" type="button" aria-expanded="false">Affiliate Schools</button>
+                <div class="nav-dropdown-content">
+                    <a href="ruhs/">Redondo Union HS</a>
+                    <a href="../../nhs/">Narbonne HS</a>
                     <a href="https://www.marinaband.org/" target="_blank" rel="noopener noreferrer">Marina HS</a>
                 </div>
             </div>
 
-            <a class="link-style-nav" href="contact us/contact-us.html">Contact Us</a>
+            <a class="link-style-nav" href="contact-us/">Contact Us</a>
         </nav>
         <hr>
     </header>
@@ -132,5 +132,55 @@
         Copyright &copy; 2026 | Generix Music Education
     </footer>
     <hr>
+
+    <script>
+        // Touch/mobile behavior: tap button to toggle dropdown.
+        (function () {
+            var touchMediaQuery = window.matchMedia('(hover: none), (pointer: coarse)');
+            var dropdown = document.querySelector('.nav-dropdown');
+            if (!dropdown) return;
+
+            var button = dropdown.querySelector('.nav-dropdown-label');
+            if (!button) return;
+
+            function setOpen(isOpen) {
+                dropdown.classList.toggle('is-open', isOpen);
+                button.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            }
+
+            function closeIfDesktop(event) {
+                if (event.matches === false) {
+                    setOpen(false);
+                }
+            }
+
+            button.addEventListener('click', function (event) {
+                if (!touchMediaQuery.matches) return;
+
+                event.preventDefault();
+                event.stopPropagation();
+                setOpen(!dropdown.classList.contains('is-open'));
+            });
+
+            document.addEventListener('click', function (event) {
+                if (!touchMediaQuery.matches) return;
+                if (!dropdown.contains(event.target)) {
+                    setOpen(false);
+                }
+            });
+
+            document.addEventListener('keydown', function (event) {
+                if (event.key === 'Escape') {
+                    setOpen(false);
+                }
+            });
+
+            if (typeof touchMediaQuery.addEventListener === 'function') {
+                touchMediaQuery.addEventListener('change', closeIfDesktop);
+            } else if (typeof touchMediaQuery.addListener === 'function') {
+                touchMediaQuery.addListener(closeIfDesktop);
+            }
+        })();
+    </script>
 </body>
 </html>

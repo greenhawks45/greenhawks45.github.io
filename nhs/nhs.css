@@ -1,0 +1,233 @@
+/* * * * * * * * * * * */
+/* Content Box Formats */
+/* * * * * * * * * * * */
+#nhs-banner {
+    border: var(--border);
+    border-radius: var(--border-radius);
+}
+
+.banner-container {
+    width: 80%;
+    background-color: var(--background);
+    border-radius: var(--border-radius);
+    border: var(--border);
+
+    background-image: radial-gradient(circle, green, green, black);
+}
+
+.slideshow-banner {
+    position: relative;
+    height: 20.6vw;
+}
+
+.slideshow-slide {
+    position: absolute;
+    inset: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0;
+    animation: slideFade 70s infinite linear;
+}
+
+.slide-1 {
+    background-image: url('resources/banner/IMG_1814.jpg');
+    animation-delay: 0s;
+}
+
+.slide-2 {
+    background-image: url('resources/banner/IMG_0859.jpg');
+    animation-delay: -10s;
+}
+
+.slide-3 {
+    background-image: url('resources/banner/IMG_1071.jpg');
+    animation-delay: -20s;
+}
+
+.slide-4 {
+    background-image: url('resources/banner/IMG_1075.jpg');
+    animation-delay: -30s;
+}
+
+.slide-5 {
+    background-image: url('resources/banner/IMG_6102.jpg');
+    animation-delay: -40s;
+}
+
+.slide-6 {
+    background-image: url('resources/banner/IMG_9899.jpg');
+    animation-delay: -50s;
+}
+
+.slide-7 {
+    background-image: url('resources/banner/IMG_1361.jpg');
+    animation-delay: -60s;
+}
+
+@keyframes slideFade {
+  0%     { opacity: 0; }
+  2.5%   { opacity: 1; } /* faster fade in */
+  14%    { opacity: 1; } /* hold */
+  17%    { opacity: 0; } /* faster fade out */
+  100%   { opacity: 0; }
+}
+
+main {
+    row-gap: 1vw;
+}
+
+.blocks,
+.sheet-music,
+.nhs-calendar,
+#nhs-form {
+    width: 80%;
+    padding-bottom: 16px;
+
+    border: var(--border);
+    border-radius: var(--border-radius);
+
+    margin-top: 6px;
+    background-color: var(--background);
+}
+
+/* Info + Transportation block */
+.double-block {
+    display: flex;
+    gap: 1vw;
+    width: 80%;
+}
+
+.blocks {
+    flex: 1;
+}
+
+/* Transportation Forms */
+#transportation-form {
+    justify-items: center;
+}
+
+ol {
+    text-align: left;
+    line-height: 150%;
+}
+
+/* Calendar */
+
+.calendar-size-container {
+    width: 70vw;
+    height: 45vw;
+    box-sizing: border-box;
+
+    margin: 0 auto;
+    margin-bottom: 2.85vw;
+}
+
+@media screen and (max-width:1200px) {
+    /* Info + Transportation block */
+    .double-block {
+        flex-wrap: wrap;
+    }
+
+    .blocks {
+        flex-grow: 1;
+        flex-basis: 100%;
+    }
+}
+
+
+
+
+
+/*Desktop Form*/
+
+h3 {
+    margin-bottom: 2vh;
+}
+
+.form-comment {
+    font-size: clamp(0.6rem, 1.25vw + 0.25rem, 1.2rem);
+
+    margin: 0 auto 1vh auto;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+
+
+    align-items: flex-start;
+    row-gap: 2vh;
+}
+
+.form-block {
+    display: flex;
+    flex-direction: column;
+
+    flex: 0 0 40vw;
+    row-gap: 0.5vh;
+}
+
+
+/*Input fields stylizing*/
+form input,
+form select {
+    background-color: #2c2c2c;  /* field background */
+    color: var(--text);             /* typed text color */
+    border: 2px solid #6c6c6c;
+    font-size: clamp(0.8rem, 1.25vw + 0.25rem, 1.5rem);
+    font-family: Candara, Trebuchet MS;
+
+    margin: 0 auto 2vh auto;
+    width: 25vw
+}
+
+form button:hover {
+    color: var(--hover);
+    cursor: pointer;
+}
+
+form hr {
+    display: none;
+}
+
+#desktop-hr {
+    display: block;
+    width: 70%;
+    margin: 0 10vw;
+}
+
+/*phone/tablet versions*/
+@media screen and (max-width:1530px) {
+    
+    /*Form*/
+    form {
+        flex-direction: column;
+    }
+    
+    .form-block {
+        flex: 0 0 100%;
+
+        margin: 0 auto;
+    }
+
+    form input,
+    form select,
+    form textarea {
+    width: 40vw;
+    text-align: center;
+    }
+
+    form hr, #desktop-hr {
+        margin: 0 10%;
+        display: block;
+        width: 80%;
+        height: 0.25vh;
+        background-color: var(--background);
+        border-width: 2px;
+    }
+
+    #nhs-form p {
+        margin-bottom: 0;
+    }
+}

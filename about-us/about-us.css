@@ -78,11 +78,11 @@ h1 {
 }
 
 #jacobmills {
-    background-image: url("staff photos/jacobmills.jpg");
+    background-image: url("staff-photos/jacobmills.jpg");
 }
 
 #masonnguyen {
-    background-image: url("staff photos/masonnguyen.png");
+    background-image: url("staff-photos/masonnguyen.png");
     background-position: center 38%;
     filter: invert(87.5%);
 }
