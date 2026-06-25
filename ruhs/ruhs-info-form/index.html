@@ -73,7 +73,7 @@
         <div id="ruhs-form">
             <h2>Student Information Form</h2>
             <p>Any fields with an asterisk * are required</p>
-            <form action="#" method="post">
+            <form id="ruhs-student-info-form" action="#" method="post">
                 <hr id="desktop-hr">
                 <div class="form-block">
                     <h3>Student Info</h3>
@@ -118,7 +118,7 @@
 
                 
                 <div class="form-block">
-                    <h3>Parent/Guardian Info</h3>
+                    <h3>Parent / Guardian #1 Info</h3>
 
                     <label for="guardian-1-first-name">*Parent / Guardian 1 First Name:</label>
                     <input type="text" id="guardian-1-first-name" name="guardian1FirstName" required>
@@ -138,6 +138,8 @@
 
                     <label for="guardian-1-email">*Parent / Guardian 1 Email:</label>
                     <input type="email" id="guardian-1-email" name="guardian1Email" required>
+
+                    <h3>Parent / Guardian #2 Info</h3>
 
                     <label for="guardian-2-first-name">Parent / Guardian 2 First Name:</label>
                     <input type="text" id="guardian-2-first-name" name="guardian2FirstName">
@@ -162,17 +164,17 @@
 
                 <div class="form-block">
                     <h3>Emergency Contact #1 Info</h3>
-                    <label for="emergency-first-name">*Emergency Contact First Name:</label>
-                    <input type="text" id="emergency-first-name" name="emergencyFirstName" required>
+                    <label for="emergency-1-first-name">*Emergency Contact First Name:</label>
+                    <input type="text" id="emergency-1-first-name" name="emergency1FirstName" required>
 
-                    <label for="emergency-last-name">*Emergency Contact Last Name:</label>
-                    <input type="text" id="emergency-last-name" name="emergencyLastName" required>
+                    <label for="emergency-1-last-name">*Emergency Contact Last Name:</label>
+                    <input type="text" id="emergency-1-last-name" name="emergency1LastName" required>
 
-                    <label for="emergency-phone">*Emergency Contact Phone:</label>
+                    <label for="emergency-1-phone">*Emergency Contact Phone:</label>
                     <input
                         type="tel"
-                        id="emergency-phone"
-                        name="emergencyPhone"
+                        id="emergency-1-phone"
+                        name="emergency1Phone"
                         inputmode="numeric"
                         pattern="[0-9]{10}"
                         maxlength="10"
@@ -181,17 +183,17 @@
 
                 <div class="form-block">
                     <h3>Emergency Contact #2 Info</h3>
-                    <label for="emergency-first-name">Emergency Contact First Name:</label>
-                    <input type="text" id="emergency-first-name" name="emergencyFirstName">
+                    <label for="emergency-2-first-name">Emergency Contact First Name:</label>
+                    <input type="text" id="emergency-2-first-name" name="emergency2FirstName">
 
-                    <label for="emergency-last-name">Emergency Contact Last Name:</label>
-                    <input type="text" id="emergency-last-name" name="emergencyLastName">
+                    <label for="emergency-2-last-name">Emergency Contact Last Name:</label>
+                    <input type="text" id="emergency-2-last-name" name="emergency2LastName">
 
-                    <label for="emergency-phone">Emergency Contact Phone:</label>
+                    <label for="emergency-2-phone">Emergency Contact Phone:</label>
                     <input
                         type="tel"
-                        id="emergency-phone"
-                        name="emergencyPhone"
+                        id="emergency-2-phone"
+                        name="emergency2Phone"
                         inputmode="numeric"
                         pattern="[0-9]{10}"
                         maxlength="10">
@@ -201,6 +203,7 @@
                 <hr id="desktop-hr">
                 <br>
                 <button type="submit" class="link-style-1">Submit</button>
+                <p id="form-status" aria-live="polite"></p>
             </form>
         </div>
     </main>
@@ -212,7 +215,58 @@
     </footer>
     <hr>
 
+
     <script>
+        // Replace this with your deployed Google Apps Script web app URL.
+        var GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycby8jL4yqGP6zZdeYw6W_wKgYXRnShu8MvxG_-D7LrX-M9vHHXHxxvveFdtZU73Z5_Ra/exec';
+
+        (function () {
+            var form = document.getElementById('ruhs-student-info-form');
+            var status = document.getElementById('form-status');
+            if (!form || !status) return;
+
+            form.addEventListener('submit', async function (event) {
+                event.preventDefault();
+
+                /*Deployment ID: AKfycby8jL4yqGP6zZdeYw6W_wKgYXRnShu8MvxG_-D7LrX-M9vHHXHxxvveFdtZU73Z5_Ra*/
+                if (GOOGLE_SCRIPT_URL.indexOf('AKfycby8jL4yqGP6zZdeYw6W_wKgYXRnShu8MvxG_-D7LrX-M9vHHXHxxvveFdtZU73Z5_Ra') !== -1) {
+                    status.textContent = 'Form setup incomplete: add your Google Apps Script deployment URL in this file.';
+                    return;
+                }
+
+                var submitButton = form.querySelector('button[type="submit"]');
+                var formData = new FormData(form);
+                var payload = {};
+
+                formData.forEach(function (value, key) {
+                    payload[key] = typeof value === 'string' ? value.trim() : value;
+                });
+                payload.submittedAt = new Date().toISOString();
+
+                if (submitButton) submitButton.disabled = true;
+                status.textContent = 'Submitting...';
+
+                try {
+                    await fetch(GOOGLE_SCRIPT_URL, {
+                        method: 'POST',
+                        mode: 'no-cors',
+                        headers: {
+                            'Content-Type': 'text/plain;charset=utf-8'
+                        },
+                        body: JSON.stringify(payload)
+                    });
+
+                    status.textContent = 'Thanks, your form was submitted.';
+                    form.reset();
+                } catch (error) {
+                    console.error(error);
+                    status.textContent = 'Submission failed. Please try again.';
+                } finally {
+                    if (submitButton) submitButton.disabled = false;
+                }
+            });
+        })();
+
         // Touch/mobile behavior: tap button to toggle dropdown.
         (function () {
             var touchMediaQuery = window.matchMedia('(hover: none), (pointer: coarse)');
