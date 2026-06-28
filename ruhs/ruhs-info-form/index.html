@@ -256,11 +256,11 @@
                         body: JSON.stringify(payload)
                     });
 
-                    status.textContent = 'Thanks, your form was submitted.';
+                    status.textContent = 'Thanks! Your form has been submitted.';
                     form.reset();
                 } catch (error) {
                     console.error(error);
-                    status.textContent = 'Submission failed. Please try again.';
+                    status.textContent = 'Submission failed. Please refresh and try again.';
                 } finally {
                     if (submitButton) submitButton.disabled = false;
                 }

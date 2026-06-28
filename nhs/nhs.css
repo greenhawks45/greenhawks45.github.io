@@ -1,6 +1,7 @@
 /* * * * * * * * * * * */
 /* Content Box Formats */
 /* * * * * * * * * * * */
+
 #nhs-banner {
     border: var(--border);
     border-radius: var(--border-radius);
@@ -31,37 +32,37 @@
 }
 
 .slide-1 {
-    background-image: url('resources/banner/IMG_1814.jpg');
+    background-image: url('resources/banner/IMG_6877.jpg');
     animation-delay: 0s;
 }
 
 .slide-2 {
-    background-image: url('resources/banner/IMG_0859.jpg');
+    background-image: url('resources/banner/IMG_9780.jpg');
     animation-delay: -10s;
 }
 
 .slide-3 {
-    background-image: url('resources/banner/IMG_1071.jpg');
+    background-image: url('resources/banner/IMG_9782.jpg');
     animation-delay: -20s;
 }
 
 .slide-4 {
-    background-image: url('resources/banner/IMG_1075.jpg');
+    background-image: url('resources/banner/IMG_8422.jpg');
     animation-delay: -30s;
 }
 
 .slide-5 {
-    background-image: url('resources/banner/IMG_6102.jpg');
+    background-image: url('resources/banner/IMG_5926.jpg');
     animation-delay: -40s;
 }
 
 .slide-6 {
-    background-image: url('resources/banner/IMG_9899.jpg');
+    background-image: url('resources/banner/Capture2.JPG');
     animation-delay: -50s;
 }
 
 .slide-7 {
-    background-image: url('resources/banner/IMG_1361.jpg');
+    background-image: url('resources/banner/Capture.JPG');
     animation-delay: -60s;
 }
 
@@ -225,9 +226,5 @@ form hr {
         height: 0.25vh;
         background-color: var(--background);
         border-width: 2px;
-    }
-
-    #nhs-form p {
-        margin-bottom: 0;
     }
 }
