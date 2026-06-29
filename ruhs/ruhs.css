@@ -1,10 +1,6 @@
 /* * * * * * * * * * * */
 /* Content Box Formats */
 /* * * * * * * * * * * */
-#ruhs-banner {
-    border: var(--border);
-    border-radius: var(--border-radius);
-}
 
 .banner-container {
     width: 80%;
@@ -27,7 +23,7 @@
     background-repeat: no-repeat;
     background-position: center;
     opacity: 0;
-    animation: slideFade 70s infinite linear;
+    animation: slideFade 80s infinite linear;
 }
 
 .slide-1 {
@@ -63,6 +59,11 @@
 .slide-7 {
     background-image: url('resources/banner/IMG_1361.jpg');
     animation-delay: -60s;
+}
+
+.slide-8 {
+    background-image: url('resources/banner/IMG_0105.jpg');
+    animation-delay: -70s;
 }
 
 @keyframes slideFade {
