@@ -80,6 +80,7 @@ main {
 
 .blocks,
 .sheet-music,
+.wishlist,
 .ruhs-calendar,
 #ruhs-form {
     width: 80%;
@@ -108,7 +109,7 @@ main {
     justify-items: center;
 }
 
-ol {
+ul {
     text-align: left;
     line-height: 150%;
 }
@@ -168,7 +169,6 @@ form {
     flex: 0 0 40vw;
     row-gap: 0.5vh;
 }
-
 
 /*Input fields stylizing*/
 form input,
